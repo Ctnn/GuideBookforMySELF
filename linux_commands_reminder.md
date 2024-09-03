@@ -1,85 +1,55 @@
-Linux Commands Notes
-ls -l
+ls - l => Normal listeleme gibi ama detaylı
 
-Displays a detailed list of files and directories.
-ls -al
+ls -al => Gizli öğelerle birlikte yukarıda işlevede çalışıyor.
 
-Lists all files, including hidden ones, with detailed information.
-pwd
+pwd => Hangi lokasyonda olduğunu gösterir.
 
-Prints the current working directory.
-touch file_name
+touch file_name => istenilen dosyanın oluşturulmasında işe yarar.
 
-Creates a new file with the specified name.
-nano file_name
+nano file_name => istenilen dosyanın oluşturulmasında işe yarar ve düzenleme yapılır
 
-Creates and opens a file in the Nano text editor for editing.
-cat >> file_name
+cat >> file_name =>  istenilen dosyanın oluşturulmasında işe yarar, basit düzeyde düzenleme yapmaya izin verir ( genellikle copy paste'de kullanılıyorum.)
 
-Creates a file if it does not exist and allows simple appending of text (often used for copy-paste).
-vim file_name
+vim file_name => istenilen dosyanın oluşturulmasında işe yarar ve düzenleme yapılır. (press escape and write :wq)
 
-Opens a file in the Vim text editor for editing (use :wq to save and exit).
-sudo passwd your_username
+sudo passwd your_username => Şifreni değiştir
 
-Changes the password for the specified user.
-whatis program_name
+whatis program_name => Programın ne işe yaradığını söyler.
 
-Displays a brief description of what a program does.
-which program_name
+which program_name => Default olan programın yüklü olduğu yeri söyler.
 
-Shows the path of the default installed program.
-whereis program_name
+whereis program_name => Programın yüklü olduğu yeri söyler.
 
-Locates the binary, source, and manual page files for a command.
-zip file.zip file
+zip file.zip file => İstenileni ziple.
 
-Compresses a file into a zip archive.
-unzip file.zip
+unzip file.zip =>  İstenilen dosyayı zipden çıkar.
 
-Extracts files from a zip archive.
-cmp file1 file2
+cmp file1 file2 => İstenilen iki dosyayı karşılaştırır. Sadece line bazlı bir çıktı üretir bir nevi göstergedir.
 
-Compares two files and shows the first difference, if any, on a line-by-line basis.
-diff file1 file2
+diff file1 file2 => İstenilen iki dosyayı karşılaştırır. Tam olarak farkın ne olduğunu söyler ve gösterir.
 
-Compares two files and shows the exact differences.
-sudo find / -name "deneme"*
+sudo find / -name "deneme*" => Bütün lokasyonlarda deneme'nin geçtiği dosyaları veya yolları arar.
 
-Searches for files or directories containing "deneme" in all locations.
-sudo find . -type f -name ".*"
+sudo find . -type f -name ".*" => Gizli olan dosyaları bulur.
 
-Finds hidden files in the current directory and its subdirectories.
-find . -type f -empty
+find . -type f -empty => Boş olan dizinleri listeler.
 
-Lists all empty directories.
-ip address | grep eth0 | grep inet | awk '{print $2}'
+ip address | grep eth0 | grep inet | awk '{print $2}' => Ip bilgilerinden sadece ip adresini çek. 
 
-Extracts the IP address from the ip address command output.
-uname -a
+uname -a => Kernel sürümünü öğren.
 
-Displays detailed information about the kernel version.
-neofetch (package)
+neofetch (package) => İşletim sistemi ve sistemin için gerekli bütün bilgileri sunar.
 
-Displays system information, including the operating system and hardware details.
-free
+free => Bellek kullanımı ile birlikte detaylarını gösterir.
 
-Shows details about memory usage.
-df -H
+df -H => Diskinde ne kadar boş alanın olduğunu gösterir.
 
-Displays the amount of free disk space.
-ps -aux
+ps -aux => Arkaplanda işleyen uygulamaları ve detaylarını gösterir.
 
-Shows a list of running processes and their details.
-ps -aux | grep python
+ps -aux | grep python => Arkaplanda işleyen istenilen uygulamanın bulunmasını sağlar.
 
-Finds running processes related to Python.
-kill -9 pid
+kill -9 pid => Bulunan uygulama pid'si ile uygulamayı sonlandırır.
 
-Terminates a process with the specified PID.
-pkill -f app_name
+pkill -f app_name => Uygulamayı direkt sonlandırır.
 
-Terminates a process by its name.
-sudo shutdown -h now
-
-Immediately shuts down the system.
+sudo shutdown -h now => Sistemi şimdi sonlandırır.
