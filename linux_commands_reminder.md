@@ -1,55 +1,85 @@
-ls - l => Normal listeleme gibi ama detaylı
+# Linux Commands Notes
 
-ls -al => Gizli öğelerle birlikte yukarıda işlevede çalışıyor.
+1. **ls -l**
+   - Displays a detailed list of files and directories.
 
-pwd => Hangi lokasyonda olduğunu gösterir.
+2. **ls -al**
+   - Lists all files, including hidden ones, with detailed information.
 
-touch file_name => istenilen dosyanın oluşturulmasında işe yarar.
+3. **pwd**
+   - Prints the current working directory.
 
-nano file_name => istenilen dosyanın oluşturulmasında işe yarar ve düzenleme yapılır
+4. **touch file_name**
+   - Creates a new file with the specified name.
 
-cat >> file_name =>  istenilen dosyanın oluşturulmasında işe yarar, basit düzeyde düzenleme yapmaya izin verir ( genellikle copy paste'de kullanılıyorum.)
+5. **nano file_name**
+   - Creates and opens a file in the Nano text editor for editing.
 
-vim file_name => istenilen dosyanın oluşturulmasında işe yarar ve düzenleme yapılır. (press escape and write :wq)
+6. **cat >> file_name**
+   - Creates a file if it does not exist and allows simple appending of text (often used for copy-paste).
 
-sudo passwd your_username => Şifreni değiştir
+7. **vim file_name**
+   - Opens a file in the Vim text editor for editing (use `:wq` to save and exit).
 
-whatis program_name => Programın ne işe yaradığını söyler.
+8. **sudo passwd your_username**
+   - Changes the password for the specified user.
 
-which program_name => Default olan programın yüklü olduğu yeri söyler.
+9. **whatis program_name**
+   - Displays a brief description of what a program does.
 
-whereis program_name => Programın yüklü olduğu yeri söyler.
+10. **which program_name**
+    - Shows the path of the default installed program.
 
-zip file.zip file => İstenileni ziple.
+11. **whereis program_name**
+    - Locates the binary, source, and manual page files for a command.
 
-unzip file.zip =>  İstenilen dosyayı zipden çıkar.
+12. **zip file.zip file**
+    - Compresses a file into a zip archive.
 
-cmp file1 file2 => İstenilen iki dosyayı karşılaştırır. Sadece line bazlı bir çıktı üretir bir nevi göstergedir.
+13. **unzip file.zip**
+    - Extracts files from a zip archive.
 
-diff file1 file2 => İstenilen iki dosyayı karşılaştırır. Tam olarak farkın ne olduğunu söyler ve gösterir.
+14. **cmp file1 file2**
+    - Compares two files and shows the first difference, if any, on a line-by-line basis.
 
-sudo find / -name "deneme*" => Bütün lokasyonlarda deneme'nin geçtiği dosyaları veya yolları arar.
+15. **diff file1 file2**
+    - Compares two files and shows the exact differences.
 
-sudo find . -type f -name ".*" => Gizli olan dosyaları bulur.
+16. **sudo find / -name "deneme*"**
+    - Searches for files or directories containing "deneme" in all locations.
 
-find . -type f -empty => Boş olan dizinleri listeler.
+17. **sudo find . -type f -name ".*"**
+    - Finds hidden files in the current directory and its subdirectories.
 
-ip address | grep eth0 | grep inet | awk '{print $2}' => Ip bilgilerinden sadece ip adresini çek. 
+18. **find . -type f -empty**
+    - Lists all empty directories.
 
-uname -a => Kernel sürümünü öğren.
+19. **ip address | grep eth0 | grep inet | awk '{print $2}'**
+    - Extracts the IP address from the `ip address` command output.
 
-neofetch (package) => İşletim sistemi ve sistemin için gerekli bütün bilgileri sunar.
+20. **uname -a**
+    - Displays detailed information about the kernel version.
 
-free => Bellek kullanımı ile birlikte detaylarını gösterir.
+21. **neofetch (package)**
+    - Displays system information, including the operating system and hardware details.
 
-df -H => Diskinde ne kadar boş alanın olduğunu gösterir.
+22. **free**
+    - Shows details about memory usage.
 
-ps -aux => Arkaplanda işleyen uygulamaları ve detaylarını gösterir.
+23. **df -H**
+    - Displays the amount of free disk space.
 
-ps -aux | grep python => Arkaplanda işleyen istenilen uygulamanın bulunmasını sağlar.
+24. **ps -aux**
+    - Shows a list of running processes and their details.
 
-kill -9 pid => Bulunan uygulama pid'si ile uygulamayı sonlandırır.
+25. **ps -aux | grep python**
+    - Finds running processes related to Python.
 
-pkill -f app_name => Uygulamayı direkt sonlandırır.
+26. **kill -9 pid**
+    - Terminates a process with the specified PID.
 
-sudo shutdown -h now => Sistemi şimdi sonlandırır.
+27. **pkill -f app_name**
+    - Terminates a process by its name.
+
+28. **sudo shutdown -h now**
+    - Immediately shuts down the system.
